@@ -1,0 +1,7 @@
+[build]
+  functions = "."
+
+[[redirects]]
+  from = "/api/*"
+  to = "/server/:splat"
+  status = 200
