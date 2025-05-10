@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 
 // Define the Info schema
 const projectSchema = new mongoose.Schema({
-      shortname: String,
       projectName: String,
+      shortname: String,
       technologies: String,
       description: String,
       imageLink: String,
