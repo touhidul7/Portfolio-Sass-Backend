@@ -42,6 +42,23 @@ const serverless = require('serverless-http');
 module.exports.handler = serverless(app);
 
 
+// =================== Server Log =================== //
+let logs = [];
+
+const originalLog = console.log;
+console.log = (...args) => {
+  const message = args.map(arg => typeof arg === 'object' ? JSON.stringify(arg) : arg).join(' ');
+  logs.push(`[${new Date().toISOString()}] ${message}`);
+  if (logs.length > 1000) logs.shift(); // keep last 1000 logs
+  originalLog.apply(console, args);
+};
+
+app.get('/console', (req, res) => {
+  res.send(`<pre>${logs.join('\n')}</pre>`)
+});
+
+
+
 // =================== Server Interface =================== //
 
 app.get('/', (req, res) => {
