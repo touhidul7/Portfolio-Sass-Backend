@@ -32,6 +32,9 @@ app.use(require('./routes/skillroutes'));
 // ====================== Technology Routes ====================== //
 app.use(require('./routes/technologyroutes'));
 
+// ====================== Blog Routes ====================== //
+app.use(require('./routes/blogroutes'));
+
 // =================== Server Setup =================== //
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
