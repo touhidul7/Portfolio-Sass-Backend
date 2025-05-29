@@ -7,7 +7,6 @@ const blogSchema = new mongoose.Schema({
       catogory: String,
       blogContent: String,
       imageLink: String,
-      projectURL: String,
       extra: String,
 });
 
