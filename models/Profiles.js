@@ -17,5 +17,5 @@ const profilesSchema = new mongoose.Schema({
 profilesSchema.index({ profilesName: 1 });
 
 // Create and export the model
-const Profile = mongoose.model('Profiles', profilesSchema);
-module.exports = Profile;
+const Profiles = mongoose.model('Profiles', profilesSchema);
+module.exports = Profiles;
