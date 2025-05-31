@@ -8,15 +8,6 @@ const infoSchema = new mongoose.Schema({
   JobTitle: String,
   Description: String,
   phone: String,
-  Fiverr: String,
-  Facebook: String,
-  Twitter: String,
-  Instagram: String,
-  Medium: String,
-  Quora: String,
-  Pinterest: String,
-  Github: String,
-  Linkedin: String,
 });
 
 // Indexes for better performance (optional)

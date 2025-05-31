@@ -1,13 +1,11 @@
 const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db');
-// const Info = require('./models/Info'); 
-// const Project = require('./models/Project'); 
 require('dotenv').config();
 
 // Secure CORS configuration
 const corsOptions = {
-  origin: process.env.CLIENT_URL || 'http://localhost:5173', // Restrict to your frontend domain
+  origin: process.env.CLIENT_URL || 'http://localhost:5173', 
   optionsSuccessStatus: 200
 };
 
@@ -19,6 +17,9 @@ connectDB();
 
 // ====================== Info Routes ====================== //
 app.use(require('./routes/inforoutes'));
+
+// ====================== Profiles Routes ====================== //
+app.use(require('./routes/profilesroutes'));
 
 // ====================== Project Routes ====================== //
 app.use(require('./routes/projectroutes'));
