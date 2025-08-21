@@ -7,6 +7,7 @@ const projectSchema = new mongoose.Schema({
       technologies: String,
       description: String,
       imageLink: String,
+      projectImages: String,
       projectURL: String,
 });
 

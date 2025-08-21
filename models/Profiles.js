@@ -11,6 +11,8 @@ const profilesSchema = new mongoose.Schema({
       Pinterest: String,
       Github: String,
       Linkedin: String,
+      Whatsapp: String,
+      Web3Key: String,
 });
 
 // Indexes for better performance (optional)
