@@ -20,8 +20,7 @@ app.use(require('./routes/inforoutes'));
 
 // ====================== Profiles Routes ====================== //
 app.use(require('./routes/profilesroutes'));
-
-// ====================== Project Routes ====================== //
+// Removed app.listen for Vercel compatibility
 app.use(require('./routes/projectroutes'));
 
 // ====================== Experience Routes ====================== //
