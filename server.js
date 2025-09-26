@@ -20,7 +20,8 @@ app.use(require('./routes/inforoutes'));
 
 // ====================== Profiles Routes ====================== //
 app.use(require('./routes/profilesroutes'));
-// Removed app.listen for Vercel compatibility
+
+// ====================== Project Routes ====================== //
 app.use(require('./routes/projectroutes'));
 
 // ====================== Experience Routes ====================== //
@@ -42,7 +43,7 @@ app.listen(PORT, () => {
 });
 
 const serverless = require('serverless-http');
-module.exports = serverless(app);
+module.exports.handler = serverless(app);
 
 
 // =================== Server Log =================== //
