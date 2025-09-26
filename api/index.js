@@ -1,3 +1,7 @@
+// Health check route for debugging
+app.get('/health', (req, res) => {
+    res.send('OK');
+});
 const express = require('express');
 const cors = require('cors');
 const connectDB = require('../config/db');
