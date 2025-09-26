@@ -42,7 +42,7 @@ app.listen(PORT, () => {
 });
 
 const serverless = require('serverless-http');
-module.exports.handler = serverless(app);
+module.exports = serverless(app);
 
 
 // =================== Server Log =================== //
