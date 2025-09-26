@@ -1,16 +1,12 @@
 
-// Health check route for debugging
-app.get('/health', (req, res) => {
-    res.send('OK');
-});
 const express = require('express');
 const cors = require('cors');
 const connectDB = require('../config/db');
 require('dotenv').config();
 
 const corsOptions = {
-  origin: process.env.CLIENT_URL || 'http://localhost:5173', 
-  optionsSuccessStatus: 200
+    origin: process.env.CLIENT_URL || 'http://localhost:5173', 
+    optionsSuccessStatus: 200
 };
 
 const app = express();
@@ -18,6 +14,11 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 connectDB();
+
+// Health check route for debugging
+app.get('/health', (req, res) => {
+    res.send('OK');
+});
 
 // app.use(require('../routes/inforoutes'));
 // app.use(require('../routes/profilesroutes'));
