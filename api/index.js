@@ -18,13 +18,13 @@ app.use(express.json());
 
 connectDB();
 
-app.use(require('../routes/inforoutes'));
-app.use(require('../routes/profilesroutes'));
-app.use(require('../routes/projectroutes'));
-app.use(require('../routes/experienceroutes'));
-app.use(require('../routes/skillroutes'));
-app.use(require('../routes/technologyroutes'));
-app.use(require('../routes/blogroutes'));
+// app.use(require('../routes/inforoutes'));
+// app.use(require('../routes/profilesroutes'));
+// app.use(require('../routes/projectroutes'));
+// app.use(require('../routes/experienceroutes'));
+// app.use(require('../routes/skillroutes'));
+// app.use(require('../routes/technologyroutes'));
+// app.use(require('../routes/blogroutes'));
 
 let logs = [];
 const originalLog = console.log;
